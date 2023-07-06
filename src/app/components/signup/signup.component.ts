@@ -61,7 +61,7 @@ export class SignupComponent implements OnInit {
       localStorage.removeItem("users");
       localStorage.setItem("users",JSON.stringify(this.users));
       alert("Registration successful.");
-      this.registrationForm.reset();
+      this.router.navigate(['/login']);
     } else {
       // Form is invalid, show error messages
       this.markAllFieldsAsTouched(this.registrationForm);

@@ -6,7 +6,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-5">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/login" >Home</a>
                 </li>
@@ -19,9 +19,9 @@
                 </li>
                 
             </ul>
-            <!-- <div>
-                <button *ngIf="loginService.isSessionActive()" class="btn btn-warning" (click)="logout()">Logout</button>
-            </div> -->
+            <div>
+                <button *ngIf="loginService.isUserLoggedIn()" class="btn btn-warning" (click)="logout()">Logout</button>
+            </div>
         </div>
     </div>
 </nav>
