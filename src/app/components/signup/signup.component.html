@@ -1,0 +1,33 @@
+<div class="container col-md-8 mt-5 mb-4 border shadow p-5">
+    <h2 style="background-color: chocolate; text-align: center;">Register here</h2>
+    <div class="text-danger">
+        {{message}}
+    </div>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="userName">Username</label>
+            <input type="text" class="form-control" formControlName="userName" required>
+            <div *ngIf="isFieldInvalid('userName')" class="text-danger">
+              Username should start with a letter and cannot contain special characters.
+            </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+            <input type="password" class="form-control" formControlName="password" required>
+            <div *ngIf="isFieldInvalid('password')" class="text-danger">
+              Password must contain at least 8 characters, including a lowercase letter, an uppercase letter, and a number.
+            </div>
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+            <input type="text" class="form-control" formControlName="name" required>
+            <div *ngIf="isFieldInvalid('name')" class="text-danger">
+              Name must contain alphabets only.
+            </div>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-info">Submit</button>
+      </div>
+      
+    </form>
+</div>
