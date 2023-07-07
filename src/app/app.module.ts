@@ -8,6 +8,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
+import { ToDoListComponent } from './components/to-do-list/to-do-list.component';
+import { CreateTaskComponent } from './components/create-task/create-task.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { LoginComponent } from './components/login/login.component';
     SignupComponent,
     NotFoundComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    ToDoListComponent,
+    CreateTaskComponent
   ],
   imports: [
     BrowserModule,

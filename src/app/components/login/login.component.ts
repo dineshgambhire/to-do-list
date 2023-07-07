@@ -13,8 +13,6 @@ export class LoginComponent implements OnInit {
 
   loginForm!: FormGroup;
   users!: User[];
-  userNameError!: string;
-  passwordError!: string;
 
   constructor(private formBuilder: FormBuilder,
               private router: Router
@@ -29,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    // debugger;
+    debugger;
     if (this.loginForm.valid) {
       const usersString = localStorage.getItem("users");
       if (usersString) {
@@ -48,11 +46,11 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("loggedInUser", JSON.stringify(currentUser));
           this.router.navigate(["/to-do-list"]);
         } else {
-          this.passwordError = "Invalid password";
+          alert("Invalid password");
           return;
         }
       } else {
-        this.userNameError = "Invalid username";
+        alert("Invalid username");
         return;
       }
       
